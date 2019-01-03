@@ -42,8 +42,8 @@ if __name__ == '__main__':
 
     goodCnt, totalCnt = 0, 0
     for td, tv in zip(testData, testLabel):
-        gaussVal = classify(trainData, trainLabel, td, 20)
-        if gaussVal == tv:
+        predictVal = classify(trainData, trainLabel, td, 20)
+        if predictVal == tv:
             goodCnt += 1
         totalCnt += 1
     print('Acc: {}'.format(goodCnt / totalCnt))
